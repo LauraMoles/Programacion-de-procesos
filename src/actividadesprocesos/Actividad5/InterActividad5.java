@@ -37,27 +37,97 @@ public class InterActividad5 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jComboBox1 = new javax.swing.JComboBox<>();
         fondo = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        topBarr = new javax.swing.JPanel();
-        Cerrar = new javax.swing.JLabel();
+        titulo = new javax.swing.JLabel();
         botones = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        topBarr = new javax.swing.JPanel();
+        Cerrar = new javax.swing.JLabel();
+        Header = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
         setResizable(false);
 
+        fondo.setBackground(new java.awt.Color(255, 255, 255));
+        fondo.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(255, 255, 255)));
+        fondo.setForeground(new java.awt.Color(255, 255, 255));
         fondo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("jLabel1");
-        fondo.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 700, 80));
+        titulo.setBackground(new java.awt.Color(124, 105, 211));
+        titulo.setFont(new java.awt.Font("Perpetua Titling MT", 1, 24)); // NOI18N
+        titulo.setForeground(new java.awt.Color(255, 255, 255));
+        titulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        titulo.setText("Elige una opcion");
+        fondo.add(titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 700, 80));
 
+        botones.setBackground(new java.awt.Color(0, 0, 0));
+        botones.setOpaque(false);
+        botones.setLayout(new java.awt.GridLayout(0, 1, 10, 5));
+
+        jButton1.setBackground(new java.awt.Color(151, 122, 210));
+        jButton1.setFont(new java.awt.Font("Perpetua", 0, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("Terminacion estandar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        botones.add(jButton1);
+
+        jButton2.setBackground(new java.awt.Color(194, 122, 210));
+        jButton2.setFont(new java.awt.Font("Perpetua", 0, 18)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2.setText("Terminacion con errores");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        botones.add(jButton2);
+
+        jButton5.setBackground(new java.awt.Color(226, 122, 210));
+        jButton5.setFont(new java.awt.Font("Perpetua", 0, 18)); // NOI18N
+        jButton5.setForeground(new java.awt.Color(255, 255, 255));
+        jButton5.setText("Notepad Runtime");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        botones.add(jButton5);
+
+        jButton4.setBackground(new java.awt.Color(216, 64, 137));
+        jButton4.setFont(new java.awt.Font("Perpetua", 0, 18)); // NOI18N
+        jButton4.setForeground(new java.awt.Color(255, 255, 255));
+        jButton4.setText("Dir PBuilder");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+        botones.add(jButton4);
+
+        jButton3.setBackground(new java.awt.Color(216, 39, 84));
+        jButton3.setFont(new java.awt.Font("Perpetua", 0, 18)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(255, 255, 255));
+        jButton3.setText("CambiarDirSalida");
+        botones.add(jButton3);
+
+        fondo.add(botones, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, 650, 240));
+
+        topBarr.setBackground(new java.awt.Color(60, 112, 194));
+        topBarr.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
+        topBarr.setOpaque(false);
         topBarr.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
                 topBarrMouseDragged(evt);
@@ -69,8 +139,11 @@ public class InterActividad5 extends javax.swing.JFrame {
             }
         });
 
+        Cerrar.setFont(new java.awt.Font("Perpetua Titling MT", 1, 25)); // NOI18N
+        Cerrar.setForeground(new java.awt.Color(255, 255, 255));
         Cerrar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cerrar.setText("X");
+        Cerrar.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         Cerrar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 CerrarMouseClicked(evt);
@@ -82,54 +155,39 @@ public class InterActividad5 extends javax.swing.JFrame {
         topBarrLayout.setHorizontalGroup(
             topBarrLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, topBarrLayout.createSequentialGroup()
-                .addGap(0, 678, Short.MAX_VALUE)
-                .addComponent(Cerrar, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 637, Short.MAX_VALUE)
+                .addComponent(Cerrar, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         topBarrLayout.setVerticalGroup(
             topBarrLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Cerrar, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+            .addComponent(Cerrar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        fondo.add(topBarr, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 30));
+        fondo.add(topBarr, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 700, 30));
 
-        botones.setLayout(new java.awt.GridLayout(0, 1, 10, 5));
+        Header.setBackground(new java.awt.Color(255, 255, 255));
+        Header.setOpaque(false);
 
-        jButton1.setText("Terminacion estandar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        botones.add(jButton1);
+        jLabel1.setBackground(new java.awt.Color(168, 100, 224));
+        jLabel1.setOpaque(true);
 
-        jButton2.setText("Terminacion con errores");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-        botones.add(jButton2);
+        javax.swing.GroupLayout HeaderLayout = new javax.swing.GroupLayout(Header);
+        Header.setLayout(HeaderLayout);
+        HeaderLayout.setHorizontalGroup(
+            HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(HeaderLayout.createSequentialGroup()
+                .addGap(1, 1, 1)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 697, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        HeaderLayout.setVerticalGroup(
+            HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HeaderLayout.createSequentialGroup()
+                .addGap(0, 3, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
 
-        jButton5.setText("Notepad Runtime");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
-            }
-        });
-        botones.add(jButton5);
-
-        jButton4.setText("Dir PBuilder");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
-            }
-        });
-        botones.add(jButton4);
-
-        jButton3.setText("CambiarDirSalida");
-        botones.add(jButton3);
-
-        fondo.add(botones, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, 650, 240));
+        fondo.add(Header, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 130));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -145,19 +203,6 @@ public class InterActividad5 extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void topBarrMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_topBarrMousePressed
-        mouseX = evt.getX();
-        mouseY = evt.getY();
-    }//GEN-LAST:event_topBarrMousePressed
-
-    private void topBarrMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_topBarrMouseDragged
-        this.setLocation(evt.getXOnScreen()-mouseX, evt.getYOnScreen()-mouseY);
-    }//GEN-LAST:event_topBarrMouseDragged
-
-    private void CerrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CerrarMouseClicked
-        System.exit(0);
-    }//GEN-LAST:event_CerrarMouseClicked
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         System.exit(0);
@@ -205,6 +250,19 @@ public class InterActividad5 extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton4ActionPerformed
 
+    private void topBarrMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_topBarrMousePressed
+        mouseX = evt.getX();
+        mouseY = evt.getY();
+    }//GEN-LAST:event_topBarrMousePressed
+
+    private void topBarrMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_topBarrMouseDragged
+        this.setLocation(evt.getXOnScreen()-mouseX, evt.getYOnScreen()-mouseY);
+    }//GEN-LAST:event_topBarrMouseDragged
+
+    private void CerrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CerrarMouseClicked
+        System.exit(0);
+    }//GEN-LAST:event_CerrarMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -245,6 +303,7 @@ public class InterActividad5 extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Cerrar;
+    private javax.swing.JPanel Header;
     private javax.swing.JPanel botones;
     private javax.swing.JPanel fondo;
     private javax.swing.JButton jButton1;
@@ -252,7 +311,9 @@ public class InterActividad5 extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel titulo;
     private javax.swing.JPanel topBarr;
     // End of variables declaration//GEN-END:variables
 }
